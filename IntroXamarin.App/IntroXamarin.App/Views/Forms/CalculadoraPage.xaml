@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculadoraPage">
+    <ContentPage.Content>
+
+        <ScrollView HorizontalOptions="End"
+                    VerticalOptions="End">
+
+            <StackLayout>
+                <!--<Frame BackgroundColor="WhiteSmoke"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand">
+                    <Label Text="CALCULADORA 3.000"
+                       FontAttributes="Italic,Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       FontSize="Title"/>
+                </Frame>-->
+
+                <Label IsEnabled="False" Text="0"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       x:Name="resultNum"
+                       HorizontalOptions="EndAndExpand" 
+                       FontAttributes="Bold" 
+                       FontSize="60">
+                </Label>
+                <Label/>
+                <Frame BackgroundColor="WhiteSmoke">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Text="7" FontSize="Title" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="8" FontSize="Title" FontAttributes="Bold"  Grid.Row="0" Grid.Column="1" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="9" FontSize="Title" FontAttributes="Bold"  Grid.Row="0" Grid.Column="2" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="/" FontSize="Title" FontAttributes="Bold"  Grid.Row="0" Grid.Column="3" BackgroundColor="Orange"  Clicked="AtraparOperador"/>
+
+                        <Button Text="4" FontSize="Title" FontAttributes="Bold"  Grid.Row="1" Grid.Column="0" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="5" FontSize="Title" FontAttributes="Bold"  Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="6" FontSize="Title" FontAttributes="Bold"  Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="*" FontSize="Title" FontAttributes="Bold"  Grid.Row="1" Grid.Column="3" BackgroundColor="Orange"  Clicked="AtraparOperador"/>
+
+                        <Button Text="1" FontSize="Title" FontAttributes="Bold"  Grid.Row="2" Grid.Column="0" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="2" FontSize="Title" FontAttributes="Bold"  Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="3" FontSize="Title" FontAttributes="Bold"  Grid.Row="2" Grid.Column="2" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="-" FontSize="Title" FontAttributes="Bold"  Grid.Row="2" Grid.Column="3" BackgroundColor="Orange"  Clicked="AtraparOperador"/>
+
+                        <Button Text="." FontSize="Title" FontAttributes="Bold"  Grid.Row="3" Grid.Column="0" BackgroundColor="White" TextColor="Black" Clicked=""/>
+                        <Button Text="0" FontSize="Title" FontAttributes="Bold"  Grid.Row="3" Grid.Column="1" BackgroundColor="White" TextColor="Black" Clicked="AtraparNumero"/>
+                        <Button Text="C" FontSize="Title" FontAttributes="Bold"  Grid.Row="3" Grid.Column="2" BackgroundColor="Orange" Clicked="LimpiarOperador"/>
+                        <Button Text="+" FontSize="Title" FontAttributes="Bold"  Grid.Row="3" Grid.Column="3" BackgroundColor="Orange" Clicked="AtraparOperador"/>
+                        <Button Text="=" FontSize="Title" FontAttributes="Bold"  Grid.Row="4" Grid.ColumnSpan="4" BackgroundColor="Gray" Clicked="AtraparCalculo"/>
+                    </Grid>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
